@@ -7,19 +7,19 @@ class Amesh < Formula
   on_macos do
     on_arm do
       url "https://github.com/ameshdev/amesh/releases/download/v0.1.2/amesh-0.1.2-darwin-arm64.tar.gz"
-      sha256 "e36ee94c5cdfdd34c704937111eab103565d93507385323ac7e283cb2d7ab024"
+      sha256 "4018092970de8b163d3d43d9c56f1ecbbb73f8485b6ead66d1862e8fc1531149"
     end
 
     on_intel do
       url "https://github.com/ameshdev/amesh/releases/download/v0.1.2/amesh-0.1.2-darwin-x64.tar.gz"
-      sha256 "2258633330f69074af2a55172907273103cc88447e0987b4a746e611df2fab34"
+      sha256 "3592d12b1729f505409f4b4e86bbeb0d1aae16481d8676b4deb5386c4a2e030c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ameshdev/amesh/releases/download/v0.1.2/amesh-0.1.2-linux-x64.tar.gz"
-      sha256 "574e14c813be4054b3ea0099b2ed5009a95d298ff7d30e1e34f6f1bf0be50b10"
+      sha256 "e5a9cf276e945f48188db0cec3ecc8ff9559578fe1954368fba71e3050a393b1"
     end
   end
 
