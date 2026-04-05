@@ -1,30 +1,36 @@
 class Amesh < Formula
   desc "Device-bound M2M authentication CLI — replaces static API keys with device identities"
   homepage "https://github.com/ameshdev/amesh"
-  version "0.3.3"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ameshdev/amesh/releases/download/v0.3.3/amesh-0.3.3-darwin-arm64.tar.gz"
-      sha256 "975d244e5c80beb9dde5c1788c087613f15b64e733f263ed4f8a1aef12466dcc"
+      url "https://github.com/ameshdev/amesh/releases/download/v0.4.0/amesh-0.4.0-darwin-arm64.tar.gz"
+      sha256 "8deeccf006b24818c7917ad9d70932afcd6c2b8ed8115d9b53185d85017fa02c"
     end
 
     on_intel do
-      url "https://github.com/ameshdev/amesh/releases/download/v0.3.3/amesh-0.3.3-darwin-x64.tar.gz"
-      sha256 "cddf495fd1bb8725bf3d1c937e088e3b35f9c07ebae9357a6fb7ef3f4992a5d1"
+      url "https://github.com/ameshdev/amesh/releases/download/v0.4.0/amesh-0.4.0-darwin-x64.tar.gz"
+      sha256 "11b25c39dd670a7bcd46760e6f54f79db92b5cb0a1d5c0df08a09298538fc08e"
     end
   end
 
   on_linux do
+    on_arm do
+      url "https://github.com/ameshdev/amesh/releases/download/v0.4.0/amesh-0.4.0-linux-arm64.tar.gz"
+      sha256 "b29c5f4591b4fc5203245081da2df4750dffdeb82270335bc2354cd8dd53725e"
+    end
+
     on_intel do
-      url "https://github.com/ameshdev/amesh/releases/download/v0.3.3/amesh-0.3.3-linux-x64.tar.gz"
-      sha256 "7feecc4125459c355c424ac58ce02808a7d6b8d0d0908cc871e4344bd42c1d16"
+      url "https://github.com/ameshdev/amesh/releases/download/v0.4.0/amesh-0.4.0-linux-x64.tar.gz"
+      sha256 "7566d93b4c177d1d5d0bd96859c18ffc9b011880527ba0afd93c8483035b57b5"
     end
   end
 
   def install
     bin.install "amesh"
+    bin.install "amesh-agent" if File.exist?("amesh-agent")
     bin.install "amesh-se-helper" if File.exist?("amesh-se-helper")
   end
 
